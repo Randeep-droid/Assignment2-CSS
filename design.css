@@ -1,0 +1,196 @@
+/* Universal Reset - Keeps things clean and predictable across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures elements maintain expected sizing */
+}
+
+/* Base Page Styling */
+body {
+    font-family: 'Verdana', sans-serif; /* Swapped font for a crisper look */
+    font-size: 18px;
+    line-height: 1.8;
+    background-color: #fcfcfc; /* Gentle off-white for a soft aesthetic */
+    color: #1a1a1a; /* Deep gray instead of pure black for easier reading */
+}
+
+/* Main Content Wrapper */
+#container {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto; /* Keeps everything nicely centered */
+    position: relative;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-top: 30px;
+    color: #f47f55; /* Bold orange for energy */
+}
+
+header h1 {
+    font-size: 2.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1em;
+    color: #333; /* Slightly richer tone for better visibility */
+}
+
+/* Layout Adjustments */
+main {
+    display: flex;
+    flex-direction: row-reverse; /* Flipped columns for a unique look */
+    margin-top: 30px;
+    gap: 30px;
+}
+
+/* Sidebar Section */
+.left {
+    flex: 0 0 28%; /* Adjusted width for better proportion */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Main Content Area */
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Section Box Design */
+section {
+    flex: 1 1 38%; /* Adjusted flexibility */
+    padding: 20px;
+    border-top: 8px solid; /* Slimmed down for subtle effect */
+    margin-bottom: 30px;
+}
+
+section:nth-of-type(1) {
+    border-color: #62f3f3; /* Deep teal for a fresh vibe */
+}
+
+section:nth-of-type(2) {
+    border-color: #b2216e; /* Bright pink for energy */
+}
+
+section:nth-of-type(3) {
+    border-color: #8dcffa; /* Azure blue for contrast */
+}
+
+section h2 {
+    font-size: 1.7em;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+section ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+section li {
+    margin-bottom: 20px;
+}
+
+section li h3 {
+    font-size: 1.3em;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+section li p {
+    font-size: 1em;
+    color: #b5a5a5;
+}
+
+section li strong {
+    color: #aa5111; /* Rich red for emphasis */
+}
+
+/* Sidebar Refinements */
+aside {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+aside figure {
+    position: relative;
+    text-align: center;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 14px;
+}
+
+aside figcaption {
+    font-size: 0.9em;
+    color: #555;
+}
+
+aside:nth-of-type(2) {
+    padding: 18px;
+    background-color: #f3f3f3; /* Light grey for subtle contrast */
+    border: 1px solid #aaa; /* Soft border styling */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+aside:nth-of-type(2) h2 {
+    font-size: 1.4em;
+    margin-bottom: 14px;
+    color: #222;
+}
+
+aside:nth-of-type(2) ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside:nth-of-type(2) li {
+    font-size: 1em;
+    margin-bottom: 14px;
+}
+
+/* Footer Adjustments */
+footer {
+    text-align: center;
+    padding: 14px;
+    background-color: #111; /* Deeper contrast */
+    color: white;
+    font-size: 1em;
+    margin-top: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack content on smaller screens */
+    }
+
+    .left, 
+    .right {
+        width: 100%;
+    }
+
+    section,
+    aside {
+        flex: 1 1 100%;
+    }
+
+    header h1 {
+        font-size: 2.4em;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+}
